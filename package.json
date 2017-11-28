@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node app.js",    
     "restart": "pm2 startOrRestart ecosystem.config.js",
-    "deploy-production": "pm2 deploy ecosystem.config.js production"
+    "deploy-production": "pm2 deploy ecosystem.config.js production --force"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
