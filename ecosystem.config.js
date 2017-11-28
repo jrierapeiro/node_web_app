@@ -8,7 +8,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ec2-user',
-      host: '54.246.138.122',
+      host: 'ec2-54-154-46-191.eu-west-1.compute.amazonaws.com',
       key: '~/certs/testing-box.pem',
       ref: 'origin/master',
       repo: 'https://github.com/jrierapeiro/node_web_app.git',
