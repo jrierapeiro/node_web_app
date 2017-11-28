@@ -1,7 +1,9 @@
 module.exports = {
   apps: [{
     name: 'node_web_app',
-    script: './app.js'
+    script: './app.js',
+    instances : '3',
+    exec_mode : 'cluster'
   }],
   deploy: {
     production: {
