@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",    
+    "start": "node app.js",
     "restart": "pm2 startOrRestart ecosystem.config.js",
     "deploy-production": "pm2 deploy ecosystem.config.js production --force"
   },

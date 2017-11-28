@@ -2,7 +2,6 @@
 
 const config = require('config');
 const packageContent = require('./package');
-config.version = process.env.VERSION;
 const express = require('express');
 const app = express();
 const middlewareConfig = require('./middleware/middlewareConfig.js');
@@ -12,8 +11,9 @@ middlewareConfig(express, app);
 routeConfig(app);
 
 const server = app.listen(config.port, () => {
+  config.startDate = new Date();  
   /* eslint-disable no-console */
-  console.log(`Listening on port ${config.port} ${Date()}`);
+  console.log(`Listening on port ${config.port} ${config.startDate}`);
 });
 
 process.on('SIGTERM', () => {

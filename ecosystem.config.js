@@ -15,8 +15,7 @@ module.exports = {
       path: '/home/ec2-user/node',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js',
       env: {
-        'NODE_ENV': 'production',
-        'VERSION': '0.0.0'
+        'NODE_ENV': 'production'
       }
     }
   }

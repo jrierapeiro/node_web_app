@@ -2,7 +2,12 @@
 const config = require('config');
 
 const getIndexPage = (req, res, next) => {
-  return res.render('index', { model: {version: config.version }});
+  return res.render('index', { model: { startDate: config.startDate } });
 };
 
-module.exports = { getIndexPage };
+const forceError = (req, res, next) => {
+  // Force exit with error to restart with pm2
+  process.exit(1);  
+};
+
+module.exports = { getIndexPage, forceError };

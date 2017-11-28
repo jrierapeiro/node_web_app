@@ -11,4 +11,5 @@ module.exports = function (app) {
   });
 
   app.use('/index', homeController.getIndexPage);
+  app.use('/error', homeController.forceError);
 };
