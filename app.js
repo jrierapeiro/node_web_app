@@ -2,7 +2,7 @@
 
 const config = require('config');
 const packageContent = require('./package');
-config.version = packageContent.version;
+config.version = process.env.VERSION;
 const express = require('express');
 const app = express();
 const middlewareConfig = require('./middleware/middlewareConfig.js');
