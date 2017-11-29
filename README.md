@@ -1,3 +1,3 @@
 # Simple node web app using express
 
-PM2
+Only configuration for EC2 PM2 deployments
