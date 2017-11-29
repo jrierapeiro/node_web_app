@@ -10,6 +10,7 @@ module.exports = function (app) {
     res.status(httpStatus.OK).send('I am healthy!');
   });
 
+  app.use('/', homeController.getIndexPage);
   app.use('/index', homeController.getIndexPage);
   app.use('/error', homeController.forceError);
 };

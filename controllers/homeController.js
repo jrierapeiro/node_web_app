@@ -2,7 +2,7 @@
 const config = require('config');
 
 const getIndexPage = (req, res, next) => {
-  return res.render('index', { model: { startDate: config.startDate } });
+  return res.render('index', { model: { message: `${config.startDate.toString()} - ${config.version}` } });
 };
 
 const forceError = (req, res, next) => {

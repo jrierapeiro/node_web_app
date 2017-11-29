@@ -10,10 +10,13 @@ const routeConfig = require('./routes/routeConfig');
 middlewareConfig(express, app);
 routeConfig(app);
 
-const server = app.listen(config.port, () => {
+config.version = packageContent.version;
+const port = process.env.PORT || 3000;
+
+const server = app.listen(port, () => {
   config.startDate = new Date();  
   /* eslint-disable no-console */
-  console.log(`Listening on port ${config.port} ${config.startDate}`);
+  console.log(`Listening on port ${port} ${config.startDate}`);
 });
 
 process.on('SIGTERM', () => {
