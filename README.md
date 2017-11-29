@@ -1,3 +1,3 @@
 # Simple node web app using express
 
-PM2
+Version for AWS Elastic Beanstalk
