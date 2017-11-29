@@ -10,7 +10,7 @@ module.exports = {
       user: 'ec2-user',
       host: '54.154.46.191',
       key: '~/certs/testing-box.pem',
-      ref: 'origin/version/ec2-pm2',
+      ref: 'origin/version/aws-ec2-pm2',
       repo: 'https://github.com/jrierapeiro/node_web_app.git',
       path: '/home/ec2-user/node',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js',
